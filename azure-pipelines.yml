@@ -23,3 +23,7 @@ steps:
     apkFiles: '**/*.apk'
     apksign: false
     zipalign: false
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.apk'
+    targetFolder: '$(build.artifactStagingDirectory)'    
