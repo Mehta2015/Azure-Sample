@@ -12,6 +12,6 @@ pool:
 steps:
 - task: AndroidSigning@3
   inputs:
-    apkFiles: '**/*.apk'
+    apkFiles: '$(Build.ArtifactStagingDirectory)/*.apk'
     apksign: false
     zipalign: false  
